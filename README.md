@@ -1,46 +1,48 @@
-GoalAura 🌟
-GenAI-Powered Financial Dream Architect
-GoalAura is a cross-platform financial wellness application that bridges the gap between abstract life dreams and financial reality. Unlike traditional budgeting apps, it uses a Multi-Agent GenAI System to "reverse-engineer" user goals (e.g., "buy a cafe in Mumbai") into brutally honest, actionable financial roadmaps.
+# GoalAura 🌟
+### *GenAI-Powered Financial Dream Architect*
 
-🚀 Key Features
-🧠 Dream Mapping Studio: Users describe dreams in natural language. The AI acts as a "Financial Architect," breaking them down into 10-step execution plans with real-time market cost estimation.
+**GoalAura** is a cross-platform financial wellness application that bridges the gap between abstract life dreams and financial reality. Unlike traditional budgeting apps, it uses a **Multi-Agent GenAI System** to "reverse-engineer" user goals (e.g., "buy a cafe in Mumbai") into brutally honest, actionable financial roadmaps.
 
-⚖️ Reality Check Engine: A logic-driven "Feasibility Score" analyzes user income vs. goal costs. It provides "brutally honest" feedback—telling users if a goal is unrealistic and suggesting concrete "Income Growth" strategies or alternatives.
+---
 
-💸 Opportunity Cost Visualizer: An AI agent that contextualizes impulse purchases (e.g., "This ₹5,000 purchase costs you 40 hours of work or ₹12,000 in future investment value").
+## 🚀 Key Features
 
-📱 Cross-Platform Ecosystem: A unified experience across Web (React) and Mobile (Flutter), allowing users to track goals and milestones on any device.
+* **🧠 Dream Mapping Studio**: Users describe dreams in natural language. The AI acts as a "Financial Architect," breaking them down into 10-step execution plans with real-time market cost estimation.
+* **⚖️ Reality Check Engine**: A logic-driven "Feasibility Score" analyzes user income vs. goal costs. It provides "brutally honest" feedback—telling users if a goal is unrealistic and suggesting concrete "Income Growth" strategies or alternatives.
+* **💸 Opportunity Cost Visualizer**: An AI agent that contextualizes impulse purchases (e.g., "This ₹5,000 purchase costs you 40 hours of work or ₹12,000 in future investment value").
+* **📱 Cross-Platform Ecosystem**: A unified experience across **Web (React)** and **Mobile (Flutter)**, allowing users to track goals and milestones on any device.
 
-🛠️ Tech Stack
-Frontend
-Web: React.js + Vite, Tailwind CSS (for responsive Dream Map visualization).
+---
 
-Mobile: Flutter (Dart) for Android/iOS.
+## 🛠️ Tech Stack
 
-Backend & AI
-Primary Backend: Node.js + Express (User Auth, Goal Management).
+### **Frontend**
+* **Web**: React.js + Vite, Tailwind CSS (Responsive Dream Map visualization)
+* **Mobile**: Flutter (Dart) for Android/iOS
 
-AI Microservice: Python + FastAPI (Agent Orchestration).
+### **Backend & AI**
+* **Primary Backend**: Node.js + Express (User Auth, Goal Management)
+* **AI Microservice**: Python + FastAPI (Agent Orchestration)
+* **Models**: Google Gemini 2.0 Flash / Pro (via `google-genai` SDK)
+* **Database**: MongoDB (Complex Schemas for User Goals & Milestones)
 
-Models: Google Gemini 2.0 Flash / Pro (via google-genai SDK).
+---
 
-Database: MongoDB (Complex Schemas for User Goals & Milestones).
+## 📂 Project Architecture
 
-📂 Project Architecture
-The system uses a Dual-Backend Architecture:
+The system uses a **Dual-Backend Architecture**:
+1.  **Node.js Server**: Handles traditional CRUD operations (Users, Transactions, Saved Goals).
+2.  **Python AI Agent**: Stateless microservice that performs heavy-lifting logic (Cost Estimation, Feasibility Analysis) using Gemini.
 
-Node.js Server: Handles traditional CRUD operations (Users, Transactions, Saved Goals).
-
-Python AI Agent: Stateless microservice that performs heavy-lifting logic (Cost Estimation, Feasibility Analysis) using Gemini.
-
-Plaintext
-
+```text
 GoalAura/
 ├── agents/            # Python/FastAPI AI Microservices
 │   └── dreammap_test/ # Core Logic for Dream Mapping & Opportunity Cost
 ├── client/            # React + Vite Web Dashboard
 ├── mobile_application/# Flutter Mobile App
 └── server/            # Node.js + Express REST API
+```
+
 ⚡ Getting Started
 Prerequisites
 Node.js (v18+) & npm
